@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+  body { @apply bg-mist font-sans text-ink antialiased; }
+  h1, h2, h3 { @apply font-display tracking-tight; }
+  :focus-visible { outline: 3px solid #2F5BFF; outline-offset: 2px; border-radius: 8px; }
+  ::selection { background: #DCE4FF; }
+}
+
+@layer components {
+  .dot-grid {
+    background-image: radial-gradient(rgba(11, 27, 58, 0.09) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .skeleton {
+    background: linear-gradient(90deg, #e4e9f5 25%, #f4f7ff 50%, #e4e9f5 75%);
+    background-size: 200% 100%;
+    @apply animate-shimmer rounded-lg;
+  }
+  .spotlight {
+    background: radial-gradient(360px circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.85), transparent 45%);
+  }
+  .btn-primary {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-signal to-ultra px-6 text-base font-semibold text-white shadow-glow transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0;
+  }
+  .btn-ghost {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl px-4 text-[15px] font-semibold text-ink-700 transition-colors hover:bg-ink/5;
+  }
+}
+
+/* Respect the OS "reduce motion" setting for every CSS animation and transition */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
