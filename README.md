@@ -2,8 +2,9 @@
 
 An inquiry desk for an EdTech business. Parents, students and schools send an inquiry through a public form. Admins log in to search, filter and track every inquiry in one dashboard.
 
-- Live demo: https://drive.google.com/file/d/1ffaIkzbGfDUloXqzlRiD6zf8zcoZl1-3/view?usp=sharing
-- Demo admin login:admin@orbit.demo /OrbitDemo@2026 
+   - Live demo: https://orbit-inquiry-systems.vercel.app
+   - Demo video: https://drive.google.com/file/d/1ffaIkzbGfDUloXqzlRiD6zf8zcoZl1-3/view?usp=sharing
+   - Demo admin login: admin@orbit.demo / OrbitDemo@2026
 
 ## Stack
 
